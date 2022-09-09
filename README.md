@@ -28,7 +28,13 @@
 - config values.yaml based on requirement(production)
 - config values-staging.yaml based on requirement(staging)
 
-- restore dump.sql (from git source) to RDS.
+- restore production db:
+> create database dbsosmed in instance DB RDS
+> restore dump.sql (from git source) to dbsosmed in instance DB RDS.
+
+- restore staging db:
+> create database dbsosmed_staging in instance DB RDS
+> restore dump.sql (from git source) to dbsosmed_staging in instance DB RDS.
 
 - Deploy to namespace default (production)
 > helm install sosmed sosmed/ --values sosmed/values.yaml
