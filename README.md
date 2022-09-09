@@ -2,17 +2,23 @@
 
 1 - Push code
 > git remote add origin https://github.com/FaishalArmansyah/sosmed.git
+
 > git push -u origin main
+
 
 2 - Build docker image
 > docker build -t "image-name:tag" .
-example:
+
+- example:
 > docker build -t nubie13/web-profilpage:2 .
+
 
 3 - Publish docker image to dockerhub
 > docker login
+
 > docker push "image-name:tag"
-example:
+
+- example:
 > docker push nubie13/web-profilpage:2
 
 4 - Kubernetes Deployment
