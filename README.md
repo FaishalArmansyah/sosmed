@@ -30,10 +30,12 @@
 
 - restore production db:
 > create database dbsosmed in instance DB RDS
+
 > restore dump.sql (from git source) to dbsosmed in instance DB RDS.
 
 - restore staging db:
 > create database dbsosmed_staging in instance DB RDS
+
 > restore dump.sql (from git source) to dbsosmed_staging in instance DB RDS.
 
 - Deploy to namespace default (production)
