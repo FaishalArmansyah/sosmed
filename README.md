@@ -22,7 +22,7 @@
 > docker push nubie13/web-profilpage:2
 
 4 - Kubernetes Deployment
-> helm create sosmed
+> helm create sosmed-chart
 - create & config secret.yaml
 - copy values.yaml to values-staging.yaml
 - config values.yaml based on requirement(production)
@@ -39,7 +39,7 @@
 > restore dump.sql (from git source) to dbsosmed_staging in instance DB RDS.
 
 - Deploy to namespace default (production)
-> helm install sosmed sosmed/ --values sosmed/values.yaml
+> helm install sosmed sosmed-chart/ --values sosmed-chart/values.yaml
 
 - Deploy to namespace staging
-> helm install sosmed sosmed/ --values sosmed/values-staging.yaml -n staging
+> helm install sosmed sosmed-chart/ --values sosmed-chart/values-staging.yaml -n staging
